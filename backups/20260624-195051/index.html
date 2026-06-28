@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluff & Care — груминг-салон</title>
+    <meta
+      name="description"
+      content="Современный груминг-салон: стрижки по породам, бережный уход, запись онлайн, мастера и программа лояльности."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Fluff & Care">
+        <span class="brand-mark">F</span>
+        <span>Fluff & Care</span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#price">Прайс</a>
+        <a href="#calendar">Запись</a>
+        <a href="#masters">Мастера</a>
+      </nav>
+      <a class="header-action" href="#calendar">Записаться</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Груминг-салон">
+        <img src="assets/hero-salon.png" alt="Собака после груминга в светлом салоне" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Груминг-салон в вашем районе</p>
+          <h1>Бережный груминг для собак и кошек</h1>
+          <p class="hero-lead">
+            Стрижки по породам, спокойная адаптация, уход за шерстью и кожей, запись на удобное время без звонков.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#calendar">Выбрать время</a>
+            <a class="ghost-btn" href="#before-after">Смотреть до/после</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-strip" aria-label="Преимущества">
+        <div>
+          <strong>2-3 часа</strong>
+          <span>средний визит</span>
+        </div>
+        <div>
+          <strong>12 пород</strong>
+          <span>частые стандарты</span>
+        </div>
+        <div>
+          <strong>4.9</strong>
+          <span>оценка клиентов</span>
+        </div>
+        <div>
+          <strong>0%</strong>
+          <span>стресс-подход</span>
+        </div>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Услуги по породам</p>
+          <h2>Подбираем уход не по шаблону, а по шерсти, темпераменту и сезону</h2>
+        </div>
+        <div class="breed-tabs" role="tablist" aria-label="Породы">
+          <button class="tab is-active" type="button" data-breed="small">Малые</button>
+          <button class="tab" type="button" data-breed="medium">Средние</button>
+          <button class="tab" type="button" data-breed="large">Крупные</button>
+        </div>
+        <div class="service-grid">
+          <article class="service-card" data-card="small">
+            <img class="service-photo" src="assets/service-spitz.png" alt="Шпиц после груминга" />
+            <span class="service-icon">01</span>
+            <h3>Шпиц, йорк, мальтипу</h3>
+            <p>Гигиена, модельная стрижка, распутывание колтунов, бережная сушка и финальная укладка.</p>
+            <strong>от 2 900 ₽</strong>
+          </article>
+          <article class="service-card" data-card="small">
+            <img class="service-photo" src="assets/service-bichon.png" alt="Бишон после груминга" />
+            <span class="service-icon">02</span>
+            <h3>Пудель и бишон</h3>
+            <p>Форма мордочки, лапы-столбики, аккуратный объем и уходовая маска для мягкой шерсти.</p>
+            <strong>от 3 600 ₽</strong>
+          </article>
+          <article class="service-card" data-card="medium">
+            <img class="service-photo" src="assets/service-spaniel.png" alt="Спаниель после ухода в салоне" />
+            <span class="service-icon">03</span>
+            <h3>Корги, бигль, спаниель</h3>
+            <p>Комплексная выческа, уход за ушами, подравнивание очесов и сезонное снижение линьки.</p>
+            <strong>от 3 400 ₽</strong>
+          </article>
+          <article class="service-card" data-card="medium">
+            <img class="service-photo" src="assets/service-schnauzer.png" alt="Шнауцер после груминга" />
+            <span class="service-icon">04</span>
+            <h3>Шнауцер и терьер</h3>
+            <p>Породный силуэт, тримминг по показаниям, линия бороды, лапы и гигиенические зоны.</p>
+            <strong>от 4 200 ₽</strong>
+          </article>
+          <article class="service-card" data-card="large">
+            <img class="service-photo" src="assets/service-large.png" alt="Крупная собака после вычеса в салоне" />
+            <span class="service-icon">05</span>
+            <h3>Ретривер, хаски, самоед</h3>
+            <p>Глубокое вычесывание подшерстка, ванна, продув, кондиционирование и мягкая сушка.</p>
+            <strong>от 5 200 ₽</strong>
+          </article>
+          <article class="service-card" data-card="large">
+            <img class="service-photo" src="assets/service-shepherd.png" alt="Овчарка после ухода в груминг-салоне" />
+            <span class="service-icon">06</span>
+            <h3>Овчарка и метисы</h3>
+            <p>Антилиняющий комплекс, чистка лап и живота, уход за когтями и шерстью между подушечками.</p>
+            <strong>от 5 900 ₽</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="price">
+        <div class="section-heading compact">
+          <p class="eyebrow">Прайс</p>
+          <h2>Понятные пакеты без сюрпризов в финале</h2>
+        </div>
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>Гигиена</h3>
+            <p>Мытье, сушка, когти, уши, лапы, интимная зона.</p>
+            <div class="price">от 1 900 ₽</div>
+            <a href="#calendar">Записаться</a>
+          </article>
+          <article class="price-card featured">
+            <span class="badge">Чаще выбирают</span>
+            <h3>Полный комплекс</h3>
+            <p>Гигиена, стрижка по породе, уходовая косметика, финальная укладка.</p>
+            <div class="price">от 3 400 ₽</div>
+            <a href="#calendar">Выбрать слот</a>
+          </article>
+          <article class="price-card">
+            <h3>Экспресс-уход</h3>
+            <p>Когти, уши, лапы, мордочка или отдельная зона.</p>
+            <div class="price">от 700 ₽</div>
+            <a href="#calendar">Уточнить время</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section before-after" id="before-after">
+        <div class="photo-panel">
+          <img src="assets/before-after.png" alt="Фото собаки до и после груминга" />
+          <div class="photo-label left">До</div>
+          <div class="photo-label right">После</div>
+        </div>
+        <div class="before-copy">
+          <p class="eyebrow">Фото до/после</p>
+          <h2>Сохраняем характер питомца, просто приводим шерсть в порядок</h2>
+          <p>
+            Не делаем одинаковые круглые морды всем подряд. Мастер смотрит на тип шерсти, привычки собаки и пожелания
+            хозяина, а потом предлагает форму, которую реально поддерживать дома.
+          </p>
+          <div class="mini-list">
+            <span>Колтуны без рывков</span>
+            <span>Мягкая косметика</span>
+            <span>Фотоотчет после визита</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section calendar-section" id="calendar">
+        <div class="section-heading">
+          <p class="eyebrow">Календарь записи</p>
+          <h2>Выберите день, мастера и удобное окно</h2>
+        </div>
+        <div class="booking-layout">
+          <div class="calendar-card" aria-label="Календарь">
+            <div class="calendar-head">
+              <button type="button" data-week="prev" aria-label="Предыдущая неделя">‹</button>
+              <strong>Июнь 2026</strong>
+              <button type="button" data-week="next" aria-label="Следующая неделя">›</button>
+            </div>
+            <div class="calendar-grid">
+              <button type="button"><span>Пн</span><strong>22</strong></button>
+              <button type="button" class="is-today"><span>Вт</span><strong>23</strong></button>
+              <button type="button"><span>Ср</span><strong>24</strong></button>
+              <button type="button" class="is-selected"><span>Чт</span><strong>25</strong></button>
+              <button type="button"><span>Пт</span><strong>26</strong></button>
+              <button type="button"><span>Сб</span><strong>27</strong></button>
+              <button type="button"><span>Вс</span><strong>28</strong></button>
+            </div>
+          </div>
+          <form class="booking-form">
+            <label>
+              Питомец
+              <select>
+                <option>Мальтипу / йорк / шпиц</option>
+                <option>Корги / спаниель / бигль</option>
+                <option>Ретривер / хаски / самоед</option>
+              </select>
+            </label>
+            <label>
+              Мастер
+              <select>
+                <option>Анна — породные стрижки</option>
+                <option>Мария — адаптация щенков</option>
+                <option>Денис — вычес крупных пород</option>
+              </select>
+            </label>
+            <div class="slot-row" aria-label="Свободное время">
+              <button type="button">10:30</button>
+              <button type="button" class="is-picked">13:00</button>
+              <button type="button">16:30</button>
+            </div>
+            <button class="primary-btn wide" type="button">Оставить заявку</button>
+            <p class="booking-note" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section masters" id="masters">
+        <div class="masters-content">
+          <p class="eyebrow">Мастера</p>
+          <h2>Команда, которая сначала знакомится с собакой, а потом берет машинку</h2>
+          <div class="master-list">
+            <article>
+              <img class="master-photo" src="assets/master-anna.png" alt="Мастер Анна" />
+              <div>
+                <strong>Анна</strong>
+                <span>8 лет опыта, шпиц, пудель, бишон</span>
+              </div>
+            </article>
+            <article>
+              <img class="master-photo" src="assets/master-maria.png" alt="Мастер Мария" />
+              <div>
+                <strong>Мария</strong>
+                <span>щенки, тревожные питомцы, мягкая адаптация</span>
+              </div>
+            </article>
+            <article>
+              <img class="master-photo" src="assets/master-denis.png" alt="Мастер Денис" />
+              <div>
+                <strong>Денис</strong>
+                <span>крупные породы, подшерсток, сезонная линька</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section loyalty-care">
+        <div class="loyalty">
+          <p class="eyebrow">Программа лояльности</p>
+          <h2>Каждый визит копит бонусы</h2>
+          <p>5% возвращается баллами, на 5-й визит — уходовая маска в подарок, щенкам до 8 месяцев первая адаптация со скидкой.</p>
+          <div class="progress" aria-label="Прогресс бонусов"><span></span></div>
+        </div>
+        <div class="care-list">
+          <p class="eyebrow">Допуход</p>
+          <h2>Добавьте к визиту</h2>
+          <ul>
+            <li><span>SPA-маска для сухой шерсти</span><strong>+900 ₽</strong></li>
+            <li><span>Ультразвуковая чистка зубов</span><strong>+1 500 ₽</strong></li>
+            <li><span>Антилинька с продувом</span><strong>+1 200 ₽</strong></li>
+            <li><span>Парфюм без резкого запаха</span><strong>+400 ₽</strong></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>Fluff & Care</strong>
+        <span>Ежедневно 10:00-21:00</span>
+      </div>
+      <a href="tel:+79990000000">+7 999 000-00-00</a>
+      <a href="#calendar">Онлайн-запись</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

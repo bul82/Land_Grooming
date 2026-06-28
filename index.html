@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Шерстяной лоск - Премиум груминг</title>
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Премиум груминг для ваших питомцев</h1>
+            <p class="hero-subtitle">Запишите собаку или кошку на уход от 2 483 руб. и получите идеальный вид.</p>
+            <button class="cta-button">Записаться на груминг за 1 минуту</button>
+        </div>
+    </header>
+    <main>
+        <section class="services">
+            <h2>Выбор услуг</h2>
+            <p>Выберите подходящие услуги для вашей породы. Мы предлагаем полный спектр ухода.</p>
+            <ul class="service-list">
+                <li>Стрижка когтей</li>
+                <li>Мытье и сушка</li>
+                <li>Стрижка ножницами</li>
+                <li>Экспресс-линька</li>
+                <li>Уход за ушами</li>
+                <li>Чистка зубов</li>
+            </ul>
+        </section>
+        <section class="pricing">
+            <h2>Прайс-лист</h2>
+            <p>Посмотрите наши цены. Все услуги имеют четкие расценки.</p>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Стрижка когтей</td>
+                        <td>2 483 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Мытье и сушка</td>
+                        <td>3 200 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Стрижка ножницами</td>
+                        <td>4 500 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Экспресс-линька</td>
+                        <td>2 800 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Уход за ушами</td>
+                        <td>1 500 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Чистка зубов</td>
+                        <td>2 000 руб.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="gallery">
+            <h2>Результаты работы</h2>
+            <p>Смотрите, как меняются питомцы после груминга. Фотографии до и после.</p>
+            <div class="slider">
+                <div class="slide">
+                    <img src="before1.jpg" alt="До груминга">
+                    <img src="after1.jpg" alt="После груминга">
+                </div>
+                <div class="slide">
+                    <img src="before2.jpg" alt="До груминга">
+                    <img src="after2.jpg" alt="После груминга">
+                </div>
+            </div>
+        </section>
+        <section class="booking">
+            <h2>Запись на груминг</h2>
+            <p>Заполните форму и выберите удобное время для визита.</p>
+            <form class="booking-form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Время:</label>
+                <input type="time" id="time" name="time" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Я согласен на обработку персональных данных <a href="privacy.html">(политика конфиденциальности)</a></label>
+                </div>
+                <button type="submit">Записаться</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Шерстяной лоск. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

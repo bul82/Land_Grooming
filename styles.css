@@ -1,0 +1,100 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #e0e7ef);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin: 10px 0 20px;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.services, .pricing, .gallery, .booking {
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+}
+
+.slide {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form label {
+    margin: 10px 0 5px;
+}
+
+.booking-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.checkbox-container {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid #ddd;
+}
