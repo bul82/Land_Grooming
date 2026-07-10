@@ -2,6 +2,7 @@
 import os
 import sys
 import datetime
+import re
 import paramiko
 
 # Configuration
@@ -10,6 +11,18 @@ USER = "root"
 KEY_FILE = "/Users/bul82/.ssh/catalog_zoj_vps"
 PROJECT_NAME = "land-grooming"
 LOCAL_DIR = "/Users/bul82/Documents/Land_Grooming"
+
+
+def collect_referenced_assets(files):
+    assets = set()
+    for filename in files:
+        path = os.path.join(LOCAL_DIR, filename)
+        if not os.path.exists(path):
+            continue
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read()
+        assets.update(re.findall(r"assets/([^\"'\s)]+)", content))
+    return sorted(assets)
 
 def run_command_over_ssh(ssh_client, cmd):
     print(f"Running remote command: {cmd}")
@@ -62,8 +75,7 @@ def deploy():
         sftp = ssh.open_sftp()
         
         # Upload main HTML & CSS & JS
-        files_to_upload = ["index.html",
-    "privacy.html", "styles.css", "script.js"]
+        files_to_upload = ["index.html", "privacy.html", "styles.css", "script.js"]
         for f in files_to_upload:
             local_path = os.path.join(LOCAL_DIR, f)
             remote_path = f"{remote_release_dir}/{f}"
@@ -72,13 +84,14 @@ def deploy():
             
         # Upload assets
         local_assets = os.path.join(LOCAL_DIR, "assets")
-        if os.path.exists(local_assets):
-            for f in os.listdir(local_assets):
-                if f.endswith((".jpg", ".png", ".webp")):
-                    local_path = os.path.join(local_assets, f)
-                    remote_path = f"{remote_release_dir}/assets/{f}"
-                    print(f"Uploading asset: assets/{f}")
-                    sftp.put(local_path, remote_path)
+        for f in collect_referenced_assets(files_to_upload):
+            local_path = os.path.join(local_assets, f)
+            if not os.path.exists(local_path):
+                print(f"Missing referenced asset: assets/{f}")
+                continue
+            remote_path = f"{remote_release_dir}/assets/{f}"
+            print(f"Uploading asset: assets/{f}")
+            sftp.put(local_path, remote_path)
             
         sftp.close()
         print("All assets uploaded successfully!")
