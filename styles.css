@@ -41,6 +41,172 @@ img {
   width: 100%;
 }
 
+.grooming-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.95), transparent 34%),
+    linear-gradient(180deg, #fbf8f2 0%, #faf6ef 100%);
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+
+.grooming-preloader__stage {
+  position: relative;
+  width: min(520px, 86vw);
+  height: 300px;
+}
+
+.grooming-preloader__card {
+  position: absolute;
+  inset: 46px 20px 64px;
+  border: 1px solid rgba(183, 169, 156, 0.34);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 28px 80px rgba(82, 66, 50, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: groomingCardIn 0.34s ease forwards;
+}
+
+.grooming-preloader__fur {
+  position: absolute;
+  top: 118px;
+  left: 50%;
+  width: 280px;
+  height: 74px;
+  transform: translateX(-50%);
+}
+
+.grooming-preloader__fur path {
+  fill: none;
+  stroke: #b7a99c;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 560;
+  stroke-dashoffset: 560;
+  animation: groomingFurDraw 0.72s 0.24s ease forwards;
+}
+
+.grooming-preloader__scissors {
+  position: absolute;
+  top: 86px;
+  left: 50%;
+  width: 88px;
+  height: 88px;
+  opacity: 0;
+  transform: translate(-50%, 8px) rotate(-8deg);
+  animation: groomingScissorsIn 0.34s 0.78s ease forwards;
+}
+
+.grooming-preloader__scissors * {
+  fill: none;
+  stroke: #1f1d1a;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.grooming-preloader__check {
+  position: absolute;
+  top: 160px;
+  left: calc(50% + 98px);
+  width: 48px;
+  height: 44px;
+}
+
+.grooming-preloader__check path {
+  fill: none;
+  stroke: #b51d1d;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  animation: groomingCheckDraw 0.32s 1.16s ease forwards;
+}
+
+.grooming-preloader__text,
+.grooming-preloader__sub {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  opacity: 0;
+}
+
+.grooming-preloader__text {
+  bottom: 38px;
+  color: #1f1d1a;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 0;
+  transform: translateY(8px);
+  animation: groomingTextIn 0.28s 1.26s ease forwards;
+}
+
+.grooming-preloader__sub {
+  bottom: 14px;
+  color: #766f68;
+  font-size: 14px;
+  animation: groomingTextIn 0.28s 1.36s ease forwards;
+}
+
+.grooming-preloader.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@keyframes groomingCardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes groomingFurDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes groomingScissorsIn {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) rotate(-8deg);
+  }
+}
+
+@keyframes groomingCheckDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes groomingTextIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .grooming-preloader__stage {
+    width: 94vw;
+    height: 270px;
+  }
+
+  .grooming-preloader__fur {
+    width: 235px;
+  }
+
+  .grooming-preloader__text {
+    font-size: 20px;
+  }
+}
+
 .site-header {
   position: fixed;
   top: 14px;

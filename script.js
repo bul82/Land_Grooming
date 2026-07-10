@@ -171,3 +171,13 @@ if (parallaxTexts.length > 0) {
     });
   });
 }
+
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("groomingPreloader");
+  if (!preloader) return;
+
+  setTimeout(() => {
+    preloader.classList.add("is-hidden");
+    setTimeout(() => preloader.remove(), 520);
+  }, 1650);
+});
