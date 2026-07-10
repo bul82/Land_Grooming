@@ -1043,7 +1043,7 @@ select:focus {
 }
 
 .hero {
-  min-height: 96vh;
+  min-height: max(720px, 96vh);
   background: #d9ded6;
 }
 
@@ -1080,7 +1080,7 @@ select:focus {
 
 .quick-strip {
   width: min(1120px, calc(100% - 32px));
-  margin-top: -50px;
+  margin-top: -28px;
   border: 1px solid rgba(32, 35, 33, 0.1);
 }
 
@@ -1175,7 +1175,7 @@ select:focus {
   }
 
   .quick-strip {
-    margin-top: -28px;
+    margin-top: -18px;
   }
 
   .proof-grid {
